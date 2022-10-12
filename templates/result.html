@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- エラーメッセージ -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="error">
+            {% for message in messages %}
+                <li>{{message}}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <p>Query『{{input_text}}』</p>
+    <div class="activity">
+        <h1>これがオススメ！</h1>
+        <p>{{activity}}</p>
+    </div>
+    <div class="score">
+        <p>マッチ率</p>
+        <p>{{score}}%</p>
+    </div>
+    <img src={{image}}>
+    <div class="genre">
+        <p>ジャンル</p>
+        <p>{{genre}}</p>
+    </div>
+    <a href={{link}} class="a_link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i>{{activity}}</a>
+
+    <form action="/fix" method="POST">
+        <input type="hidden" name="input_text" value={{input_text}}>
+        <input type="hidden" name="activity" value={{activity}}>
+        <input type="hidden" name="score" value={{score}}>
+        <input type="hidden" name="img" value={{image}}>
+        <!--追加したい要素-->
+        <p class="koushin">下記を埋めると検索結果を更新できます</p>
+        <p>追加したい要素</p>
+        <input type="text" name="positive_text">
+        <!-- 削除したい要素-->
+        <p>削除したい要素</p>
+        <input type="text" name="negative_text">
+        <input type="submit" value="Fix" class="button">
+    </form>
+
+    <a href="/" class="home_link">Homeへ<i class="fa-solid fa-paper-plane"></i></a>
+
+
+{% endblock %}

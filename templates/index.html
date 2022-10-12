@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- エラーメッセージ -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="error">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <h1>どんな休日にしたい？</h1>
+    <form action="/result" method="POST">
+        <!-- 「name」属性を「input_text」と定義-->
+        <!-- 必須項目なのでrequired -->
+        <input class="input" type="text" name="input_text" required placeholder={{example}}>
+        <input type="submit" value="Send" class="button">
+    </form>
+
+{% endblock %}

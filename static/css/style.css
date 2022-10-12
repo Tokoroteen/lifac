@@ -1,0 +1,144 @@
+body{
+    margin:0px;
+    background-color: rgb(250, 250, 250);
+}
+
+header{
+    background-color:rgb(0, 209, 8);
+    height: 5vh;
+    font-size: large;
+}
+
+ul{
+    list-style-type: none;
+    margin:0px;
+    padding-left: min(3vw,2vh);
+    padding-top: min(1.8vw,1vh);
+    /* padding: 1vw;
+    padding-bottom: 0px; */
+}
+
+header li{
+    font-size:min(4vw,20px);
+    display: inline-block;
+    padding-right: 1vw;
+}
+
+header a{
+    text-decoration: none;
+    color:white;
+}
+/* マウスオーバーしたとき */
+header a:hover {
+    text-decoration: underline;
+}
+
+.main{
+    padding-top: 0px;
+}
+
+h1{
+    font-size:min(5vw,25px);
+    margin: 0px;
+    padding: 1vh;
+}
+
+p{
+    margin: 0px;
+    padding: 1vh;
+    padding-bottom: 0px;
+}
+
+form{
+    padding-left:1vh;
+    padding-top:1vh;
+    margin-bottom: 2vh;
+}
+
+.input{
+    width:min(70vw,500px);
+    height:min(8vw,50px);
+    font-size:min(4vw,20px);
+}
+
+.button{
+    background-color: rgb(0, 209, 8);
+    color:white;
+    border: none;
+    border-radius:30px;
+    font-size:min(4vw,20px);
+    width:min(15vw,80px);
+    height: min(6vw,30px);
+}
+
+/* エラーメッセージ */
+.error{
+    margin-top: 3%;
+    vertical-align:middle;
+    background-color: rgb(255, 86, 86);
+    color:white;
+}
+
+.activity p{
+    background-color: white;
+    background: linear-gradient(transparent 20%, rgb(225, 255, 91) 50%);
+    padding-top: 0px;
+    margin-left: 2vw;
+    font-size:min(4vw,25px);
+    width:min(80vw,400px)
+}
+
+.score p{
+    display: inline-block;
+    padding-bottom: 1vh;
+}
+
+img{
+    width:100%;
+}
+
+.koushin{
+    position: relative;
+    padding: 0.3em;
+    width:min(82vw,300px);
+}
+.koushin:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:min(82vw,300px);
+    height: 7px;
+    background: repeating-linear-gradient(-45deg, rgb(225, 255, 91), rgb(225, 255, 91) 2px, white 2px, white 4px);
+}
+
+.genre p{
+    display: inline-block;
+}
+
+.a_link{
+    padding: 1vh;
+}
+
+.home_link{
+    padding: 1vh;
+    color: rgb(6, 186, 12);
+    text-decoration:none;
+}
+
+@media screen and (min-width: 481px) {
+	/* 481px以上に適用されるCSS（タブレット用） */
+}
+@media screen and (min-width: 960px) {
+	/* 960px以上に適用されるCSS（PC用） */
+    .main{
+        padding-left: 3vw;
+    }
+    /* エラーメッセージ */
+    .error{
+        width:25vw;
+    }
+    img{
+        width:40%;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>LIFAC</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <!-- レスポンシブデザイン -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/8ea6779c15.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/">LIFAC</a></li>
+            <li><a href="/detail">LIFACとは？</a></li>
+        </ul>
+    </header>
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
