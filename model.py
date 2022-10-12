@@ -9,7 +9,8 @@ from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 #model load
 model = Doc2Vec.load('./asoview_token_upto500.model')
 #タグはMeCab.Tagger（neologd辞書）を使用
-tagger = MeCab.Tagger('-Owakati -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd')
+# tagger = MeCab.Tagger('-Owakati -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd')
+tagger = MeCab.Tagger('')
 
 class Search:
     def __init__(self) -> None:
