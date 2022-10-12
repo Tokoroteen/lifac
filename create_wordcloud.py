@@ -3,7 +3,8 @@ from wordcloud import WordCloud
 
 def create_wordcloud(name, df):
     #fontの指定
-    font = 'ヒラギノ角ゴシック W3.ttc'
+    # font = 'ヒラギノ角ゴシック W3.ttc'
+    font = '/app/.fonts/ipaexg.ttf'
 
     #nameのインデックス番号
     i = df.loc[df['name']==name].index[0]
